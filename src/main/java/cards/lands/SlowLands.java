@@ -14,6 +14,6 @@ public class SlowLands extends Basic {
 
     @Override
     public void placeCard(){
-        ///FIX
+        ///FIXME
     }
 }

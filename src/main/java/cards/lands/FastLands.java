@@ -14,6 +14,6 @@ public class FastLands extends Basic {
 
     @Override
     public void placeCard(){
-        ///FIX
+        ///FIXME
     }
 }

@@ -14,6 +14,6 @@ public class PainLands extends Basic{
 
         @Override
     public void placeCard(){
-        ///Fix
+        ///FIXME
     }
 }
