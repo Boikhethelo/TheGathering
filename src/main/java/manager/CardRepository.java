@@ -1,4 +1,4 @@
-package data;
+package manager;
 
 public class CardRepository {
 }

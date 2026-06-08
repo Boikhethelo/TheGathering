@@ -1,15 +1,15 @@
 package cards.generators;
 
-import cards.Mana;
+import model.Mana;
 import cards.lands.*;
 
-import java.util.ArrayList;
+import java.util.Collection;
 
 
 public class LandGenerator {
 
 
-public static Basic loadCard(String type , String name , String description , ArrayList<Mana> mana){
+public static AbstractLand loadCard(String type , String name , String description , Collection<Mana> mana){
 
     return switch(type.toLowerCase().trim()){
 
@@ -24,6 +24,14 @@ public static Basic loadCard(String type , String name , String description , Ar
         case "triomes" -> new Triomes(name , description , mana);
         case "duel" -> new TrueDual(name , description , mana);
         case "utility" -> new UtilityLand(name , description , mana);
+        case "surveil" -> new SurveilLand(name , description , mana);
+        case "battle" -> new BattleLand(name , description , mana);
+        case "pathway" -> new PathwayLand(name , description , mana);
+        case "filter" -> new FilterLand(name , description , mana);
+        case "horizon" -> new HorizonLand(name , description , mana);
+        case "bounce" -> new BounceLand(name , description , mana);
+        case "scry" -> new ScryLand(name , description , mana);
+        case "check" -> new CheckLand(name , description , mana);
         default ->throw new IllegalArgumentException("Cannot find land type");
     };
 }
