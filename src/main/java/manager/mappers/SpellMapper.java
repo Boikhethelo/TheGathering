@@ -1,4 +1,4 @@
-package manager.mapper;
+package manager.mappers;
 
 public class SpellMapper {
 }

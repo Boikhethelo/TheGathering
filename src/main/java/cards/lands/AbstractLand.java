@@ -1,5 +1,6 @@
 package cards.lands;
 
+import cards.types.Land;
 import model.Mana;
 import cards.Status;
 import engine.GameState;
@@ -7,7 +8,7 @@ import engine.GameState;
 import java.util.Collection;
 import java.util.EnumSet;
 
-public abstract class AbstractLand implements ILand{
+public abstract class AbstractLand implements Land {
     private final EnumSet<Mana> mana;
     private final String name;
     private final String description;

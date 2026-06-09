@@ -13,7 +13,7 @@ public static AbstractLand loadCard(String type , String name , String descripti
 
     return switch(type.toLowerCase().trim()){
 
-        case "land" -> new Land(name , description , mana );
+        case "land" -> new BasicLand(name , description , mana );
         case "creature" -> new CreatureLand(name , description , mana);
         case "fast" -> new FastLands(name , description , mana);
         case "fetch" -> new FetchLands(name , description , mana);

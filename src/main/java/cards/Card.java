@@ -2,7 +2,7 @@ package cards;
 
 import engine.GameState;
 
-public interface card {
+public interface Card {
     String name();
     String description();
     Status status();

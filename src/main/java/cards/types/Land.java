@@ -1,11 +1,11 @@
-package cards.lands;
+package cards.types;
 
-import cards.card;
+import cards.Card;
 import model.Mana;
 
 import java.util.EnumSet;
 
-public interface ILand extends card {
+public interface Land extends Card {
     Mana tap(Mana colour);
     void untap();
     EnumSet<Mana> availableMana();

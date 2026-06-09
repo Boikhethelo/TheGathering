@@ -1,4 +1,4 @@
-package manager.mapper;
+package manager.mappers;
 
 public class ArtifactMapper {
     public static String classify(String subtypes, String text, String keywords) {

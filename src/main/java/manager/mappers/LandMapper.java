@@ -1,4 +1,4 @@
-package manager.mapper;
+package manager.mappers;
 
 public class LandMapper {
 
@@ -27,6 +27,9 @@ public class LandMapper {
 
         // Fast lands - two or fewer other lands
         if (text.contains("two or fewer"))      return "fast";
+
+        //Battle lands -
+        if(text.contains("two or more basic lands"))  return "battle";
 
         // Slow lands - two or more other lands
         if (text.contains("two or more"))       return "slow";
