@@ -1,4 +1,8 @@
 package cards.types;
 
-public interface Artifact {
+import cards.Card;
+
+public interface Artifact extends Card {
+    void activate();
+    void deactivate();
 }

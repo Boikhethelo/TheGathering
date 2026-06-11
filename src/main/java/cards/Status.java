@@ -1,5 +1,5 @@
 package cards;
 
 public enum Status {
-    TAPPED , UNTAPPED
+    TAPPED , UNTAPPED , ACTIVATED , DEACTIVATE
 }

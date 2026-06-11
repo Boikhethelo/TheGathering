@@ -1,4 +1,4 @@
-package manager.mappers;
+package services.mappers;
 
 import model.Mana;
 
