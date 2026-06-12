@@ -1,4 +1,4 @@
-package cards.supers;
+package cards.duals;
 
 public class EnchantmentCreature {
 }

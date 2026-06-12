@@ -1,4 +1,7 @@
 package cards.types;
 
-public interface Kindred {
+import cards.Card;
+
+public interface Kindred extends Card {
+
 }
