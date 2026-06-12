@@ -1,4 +1,7 @@
 package cards.types;
 
-public interface Battle {
+import cards.Card;
+
+public interface Battle extends Card {
+    Card protector();
 }

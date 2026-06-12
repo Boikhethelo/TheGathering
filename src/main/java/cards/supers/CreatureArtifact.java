@@ -1,4 +1,4 @@
-package cards.artifacts;
+package cards.supers;
 
 public class CreatureArtifact {
 }
