@@ -1,19 +1,32 @@
 package services.mappers;
 
 public class CreatureMapper {
-    public static String classify(String subtypes, String text, String keywords) {
-        // Tokens are usually identified by their layout in the DB
+
+    /**
+     * Classifies a Creature card.
+     *
+     * The {@code type} parameter is the full type line from the DB
+     * (e.g. "Legendary Creature — Dragon"). Legendary is a supertype
+     * found there, NOT in the rules text body — previous implementation
+     * checked {@code text.contains("Legendary")} which silently missed
+     * every legendary creature whose rules text didn't happen to say the word.
+     *
+     * CardMapper must be updated to pass {@code type} here.
+     */
+    public static String classify(String type, String text, String keywords) {
+
+        // Tokens are identified by their DB layout / token flag
         if (text.contains("token"))                 return "token";
 
-        // Legendary creatures
-        if (text.contains("Legendary"))             return "legendary";
+        // Legendary supertype lives in the type line, not in rules text
+        if (type.contains("Legendary"))             return "legendary";
 
-        // Vehicles — artifact creatures you crew
+        // Vehicles are artifact creatures you crew
         if (keywords.contains("Crew"))              return "vehicle";
 
-        // Adventure creatures — split card with a spell
+        // Adventure creatures have a spell half
         if (text.contains("Adventure"))             return "adventure";
 
-        return "creature"; // standard creature
+        return "creature";
     }
 }

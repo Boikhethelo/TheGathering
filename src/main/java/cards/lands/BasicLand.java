@@ -1,21 +1,29 @@
 package cards.lands;
 
 import model.Mana;
-import cards.Status;
 import engine.GameState;
+import cards.Status;
 
 import java.util.Collection;
 
-/**Basic lands are the foundation of MTG. You can have any number of Basic Lands in your deck, bypassing the standard rule that limits you to four copies of a single card. Each taps for one specific color of mana.*/
-
+/**
+ * Basic lands — Plains, Island, Swamp, Mountain, Forest (and Wastes).
+ * You may run any number of copies. They enter the battlefield UNTAPPED
+ * and tap for one specific colour of mana.
+ */
 public class BasicLand extends AbstractLand {
 
-    public BasicLand(String name , String description , Collection<Mana> mana){
-        super(name, description , mana);
+    public BasicLand(String name, String description, Collection<Mana> mana) {
+        super(name, description, mana);
     }
 
+    /**
+     * Basic lands enter the battlefield untapped — no restriction.
+     * The constructor already sets UNTAPPED as the default, so this
+     * method makes the intent explicit rather than being a silent no-op.
+     */
     @Override
-    public void placeCard(GameState game){
-        this.status = Status.TAPPED;
+    public void placeCard(GameState game) {
+        setStatus(Status.UNTAPPED);
     }
 }
