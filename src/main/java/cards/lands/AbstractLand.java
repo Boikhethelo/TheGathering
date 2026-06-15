@@ -1,5 +1,6 @@
 package cards.lands;
 
+import abilities.types.ManaAbility;
 import cards.types.Land;
 import model.Mana;
 import cards.Status;
@@ -66,9 +67,13 @@ public abstract class AbstractLand implements Land {
     }
 
     @Override
-    public EnumSet<Mana> availableMana() {
+    public EnumSet<Mana> producedManaTypes() {
         return EnumSet.copyOf(mana); // defensive copy
     }
+
+    // ===============================================
+    //              Abstract variable
+    // ===============================================
 
     public abstract void placeCard(GameState game);
 }

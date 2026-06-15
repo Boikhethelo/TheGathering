@@ -6,10 +6,10 @@ package abilities;
  * Every ability in the game is one of four concrete subtypes:
  *
  * <ul>
- *   <li>{@link types.StaticAbility}   — always-on effects ("Creatures you control get +1/+1")</li>
- *   <li>{@link types.TriggeredAbility} — fire on game events ("When ~ enters the battlefield…")</li>
- *   <li>{@link types.ActivatedAbility} — paid on demand ("{T}: Add {G}")</li>
- *   <li>{@link types.ManaAbility}     — activated abilities that produce mana (special: skip the stack)</li>
+ *   <li>{@link abilities.types.StaticAbility}   — always-on effects ("Creatures you control get +1/+1")</li>
+ *   <li>{@link abilities.types.TriggeredAbility} — fire on game events ("When ~ enters the battlefield…")</li>
+ *   <li>{@link abilities.types.ActivatedAbility} — paid on demand ("{T}: Add {G}")</li>
+ *   <li>{@link abilities.types.ManaAbility}     — activated abilities that produce mana (special: skip the stack)</li>
  * </ul>
  *
  * Keyword abilities (Flying, Trample, etc.) are modelled as the enum

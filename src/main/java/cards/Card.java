@@ -15,11 +15,31 @@ import java.util.List;
  */
 public interface Card {
 
+    /**
+     * Call to get the name of the card
+     * @return  {@code String}
+     */
+
     String name();
+
+    /**
+     * Call to get the written description of the card.
+     * @return {@code String}
+     */
 
     String description();
 
+    /**
+     * Call to get the current status of the card
+     * @return {@code Status}
+     */
+
     Status status();
+
+    /**
+     * The logic run when the card is placed from hand into the game
+     * @param game the current game state object.
+     */
 
     void placeCard(GameState game);
 
