@@ -13,7 +13,7 @@ package abilities;
  * </ul>
  *
  * Keyword abilities (Flying, Trample, etc.) are modelled as the enum
- * {@link keyword.Keyword}, which implements {@link types.StaticAbility}.
+ * {@link abilities.keyword.Keyword}, which implements {@link abilities.types.StaticAbility}.
  */
 public interface Ability {
     /** Display name of the ability (e.g. "Flying", "Lifelink", "Draw a card"). */

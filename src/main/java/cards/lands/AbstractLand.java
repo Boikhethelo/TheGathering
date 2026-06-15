@@ -1,6 +1,4 @@
 package cards.lands;
-
-import abilities.types.ManaAbility;
 import cards.types.Land;
 import model.Mana;
 import cards.Status;
@@ -27,7 +25,9 @@ public abstract class AbstractLand implements Land {
         this.status = Status.UNTAPPED;
     }
 
-    // ── Protected ETB helper ───────────────────────────────────────────────
+    // =======================================================================
+    //                     Protected ETB helper
+    // =======================================================================
     // Subclasses call this inside placeCard() to declare their entry state.
     // Using a named helper rather than direct field access makes the intent
     // explicit and keeps the field private.
@@ -40,7 +40,9 @@ public abstract class AbstractLand implements Land {
     @Override public String description() { return description; }
     @Override public Status status()      { return status; }
 
-    // ── Land interface ─────────────────────────────────────────────────────
+    // =======================================================================
+    //                         Land Interface
+    // =======================================================================
 
     /**
      * Taps this land to produce one mana of the requested colour.

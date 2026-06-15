@@ -18,11 +18,11 @@ public abstract class AbstractCreature implements Creature {
     private final int attack;
     private Status status;
 
-    public AbstractCreature(String name , String description , String type , Map<Mana, Integer> tapRequirement , int defense , int attack){
+    public AbstractCreature(String name , String description , String type , Map<Mana, Integer> requirement , int defense , int attack){
         this.name = name;
         this.description = description;
         this.type = type;
-        this.tapRequirement = new HashMap<Mana,Integer>(tapRequirement);
+        this.tapRequirement = new HashMap<Mana,Integer>(requirement);
         this.defense = defense;
         this.attack = attack;
         this.status = Status.ALIVE;
